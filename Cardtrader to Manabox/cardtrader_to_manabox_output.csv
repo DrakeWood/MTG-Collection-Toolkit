@@ -1,0 +1,48 @@
+set code,card name,purchase price,quantity,condition,language,foil,card number,purchase currency
+DSK,Vile Mutilator,0.23,1,Near Mint,en,True,122,usd
+DSC,Hinterland Harbor,0.51,1,Near Mint,en,False,284,usd
+DSC,Llanowar Wastes,0.63,1,Near Mint,en,False,287,usd
+DSK,Doomsday Excruciator,1.24,1,Near Mint,en,False,346,usd
+DSK,Grievous Wound,0.71,1,Near Mint,en,False,375,usd
+DSK,Dissection Tools,0.75,1,Near Mint,en,True,385,usd
+BLB,Long River Lurker,0.17,1,Near Mint,en,True,057,usd
+BLC,Octomancer,0.58,1,Slightly Played,en,False,069,usd
+BLC,Marrow-Gnawer,7.65,1,Near Mint,en,True,079,usd
+BLC,"Tamiyo, Field Researcher",1.67,1,Near Mint,en,True,100,usd
+BLB,Mistbreath Elder,0.5,1,Near Mint,en,True,184,usd
+BLB,"Clement, the Worrywort",0.0,1,Near Mint,en,True,209p,usd
+BLB,"Clement, the Worrywort",0.29,1,Near Mint,en,True,209p,usd
+BLB,Lilysplash Mentor,0.2,1,Near Mint,en,True,222,usd
+BLB,Short Bow,0.19,1,Near Mint,en,True,248,usd
+BLB,Valley Mightcaller,0.46,1,Near Mint,en,False,326,usd
+BLB,Dreamdew Entrancer,0.49,1,Slightly Played,en,True,365,usd
+ACR,Coastal Piracy,0.32,1,Near Mint,en,True,084,usd
+ACR,Coastal Piracy,0.32,1,Near Mint,en,True,084,usd
+ACR,Shao Jun,0.37,1,Near Mint,en,True,246,usd
+MH3,Foreboding Landscape,0.2,1,Near Mint,en,True,221,usd
+M3C,Growth Spiral,0.48,1,Near Mint,en,True,265,usd
+MKC,Enhanced Surveillance,0.14,1,Near Mint,en,False,102,usd
+MKM,Demand Answers,0.24,1,Near Mint,en,True,122,usd
+WHO,Run for Your Life,0.42,1,Near Mint,en,True,154,usd
+MOM,Yargle and Multani,0.62,1,Near Mint,en,True,256p,usd
+DMR,"Tatyova, Benthic Druid",0.2,1,Near Mint,en,True,203,usd
+BRO,Penregon Strongbull,0.14,1,Near Mint,en,True,147,usd
+DMU,"Uurg, Spawn of Turg",0.23,1,Near Mint,en,True,365,usd
+CLB,Githzerai Monk,0.2,1,Slightly Played,en,True,020,usd
+CLB,Ingenious Artillerist,0.68,1,Near Mint,en,True,182,usd
+CLB,Guild Artisan,0.28,1,Near Mint,en,True,505,usd
+CLB,Street Urchin,0.14,1,Near Mint,en,True,510,usd
+CLB,Street Urchin,0.14,1,Near Mint,en,True,510,usd
+DBL,Lambholt Raconteur // Lambholt Ravager,0.46,1,Near Mint,en,True,434,usd
+VOW,"Grolnok, the Omnivore",0.26,1,Slightly Played,en,True,238,usd
+MID,Croaking Counterpart,0.48,1,Slightly Played,en,True,215,usd
+AFR,You See a Guard Approach,0.21,1,Near Mint,en,True,085,usd
+AFR,Froghemoth,0.76,1,Near Mint,en,True,384,usd
+ZNR,Deliberate,0.17,1,Near Mint,en,True,056,usd
+2XM,Frogify,0.16,1,Near Mint,en,True,052,usd
+MH1,Spore Frog,0.0,1,Near Mint,en,False,180,usd
+GRN,Disinformation Campaign,0.63,1,Moderately Played,en,True,167,usd
+XLN,Dive Down,0.12,1,Near Mint,en,False,053,usd
+ORI,Turn to Frog,0.32,1,Slightly Played,en,True,081,usd
+KTK,Opulent Palace,0.35,1,Moderately Played,en,False,238,usd
+ROE,Haze Frog,0.21,1,Moderately Played,en,False,187,usd
