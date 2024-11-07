@@ -53,7 +53,7 @@ This tool imports a Cardtrader order into a Manabox collection. It adjusts colum
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/MTG-CSV-Converters.git
+   git clone https://github.com/DrakeWood/MTG-CSV-Converters.git
    ```
 
 2. **Navigate to the project directory:**
