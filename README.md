@@ -36,7 +36,7 @@ This tool imports a Cardtrader order into a Manabox collection. It adjusts colum
 #### Usage
 
 1. Ensure Python 3.x and the `pandas` library are installed.
-2. Run the script using:
+2. Run the script using this command or launch in python from file explorer:
 
    ```sh
    python cardtrader_to_manabox.py
