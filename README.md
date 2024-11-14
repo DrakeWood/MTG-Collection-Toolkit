@@ -7,6 +7,7 @@ A collection of tools for converting Magic: The Gathering (MTG) card data betwee
 - [Converters](#converters)
   - [Manabox to Archidekt](#manabox-to-archidekt)
   - [Cardtrader to Manabox](#cardtrader-to-manabox)
+  - [Deckcheck Trim assistant](#deckcheck-trim)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
@@ -20,7 +21,7 @@ Converts a Manabox collection export to an Archidekt import format. This tool sp
 #### Usage
 
 1. Ensure Python 3.x and the `pandas` library are installed.
-2. Run the script using:
+2. Run the script using this command or launch in python from file explorer:
 
    ```sh
    python manabox_to_archidekt.py sample_manabox_export.csv output.csv
@@ -38,10 +39,22 @@ This tool imports a Cardtrader order into a Manabox collection. It adjusts colum
 2. Run the script using:
 
    ```sh
-   python cardtrader_to_manabox.py sample_cardtrader_to_manabox.csv output.csv
+   python cardtrader_to_manabox.py
    ```
 
    - Optionally, specify an output file name.
+
+### Deckcheck Trim Assistant
+
+1. Ensure Python 3.x and the `pandas` library are installed.
+2. Run the script using this command or launch in python from file explorer:
+
+   ```sh
+   python trim.py
+   ```
+
+3. Copy and paste your Deck list from the Archidekt import and the Trim List from Deckcheck into the GUI.
+4. Copy and paste your updated list into Archidekt import, replacing everything existing.
 
 ## Requirements
 
