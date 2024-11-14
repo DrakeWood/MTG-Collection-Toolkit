@@ -7,7 +7,7 @@ A collection of tools for converting Magic: The Gathering (MTG) card data betwee
 - [Converters](#converters)
   - [Manabox to Archidekt](#manabox-to-archidekt)
   - [Cardtrader to Manabox](#cardtrader-to-manabox)
-  - [Deckcheck Trim assistant](#deckcheck-trim)
+  - [Deckcheck Trim Assistant](#deckcheck-trim-assistant)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
