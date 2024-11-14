@@ -29,7 +29,10 @@ Card E,1,123,Foil,003s,3.0,Good,English,usd
         output_csv = StringIO()
         
         # Process the CSV data
-        process_csv(self.input_csv, output_csv)
+        try:
+            process_csv(self.input_csv, output_csv)
+        except Exception as e:
+            self.fail(f"process_csv raised an exception: {e}")
         
         # Move to the beginning of the StringIO object
         output_csv.seek(0)
