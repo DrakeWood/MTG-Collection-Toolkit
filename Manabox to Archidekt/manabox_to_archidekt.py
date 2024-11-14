@@ -1,4 +1,9 @@
 import csv
+import pandas as pd
+import re
+import sys
+from tkinter import Tk, filedialog, Button, Label, Entry, messagebox
+import os
 
 def read_csv(file_path):
     with open(file_path, mode='r', newline='') as file:
@@ -47,6 +52,58 @@ def modify_data(data):
     modified_data = filtered_data
     return modified_data
 
+def process_csv(input_file, output_file='manabox_to_archidekt_output.csv'):
+    try:
+        # Read the CSV file
+        df = pd.read_csv(input_file)
+        
+        # Rename columns
+        df.rename(columns={
+            'Binder Name': 'binder_name',
+            'Binder Type': 'binder_type',
+            'Name': 'name',
+            'Set code': 'set_code',
+            'Set name': 'set_name',
+            'Collector number': 'collector_number',
+            'Foil': 'foil',
+            'Rarity': 'rarity',
+            'Quantity': 'quantity',
+            'ManaBox ID': 'manabox_id',
+            'Scryfall ID': 'scryfall_id',
+            'Purchase price': 'purchase_price',
+            'Misprint': 'misprint',
+            'Altered': 'altered',
+            'Condition': 'condition',
+            'Language': 'language',
+            'Purchase price currency': 'purchase_price_currency'
+        }, inplace=True)
+        
+        # Save the updated DataFrame to a new CSV file
+        df.to_csv(output_file, index=False)
+        return True
+    except Exception as e:
+        messagebox.showerror("Error", f"An error occurred during conversion: {e}")
+        return False
+
+def select_input_file():
+    global input_file
+    input_file = filedialog.askopenfilename(title="Select input CSV file", filetypes=[("CSV files", "*.csv")])
+    if input_file:
+        input_label.config(text=f"Input File: {input_file}")
+
+def run_conversion():
+    global output_file
+    if not input_file:
+        messagebox.showerror("Error", "Please select an input file.")
+        return
+    output_file = os.path.join(os.path.dirname(__file__), output_entry.get())
+    if not output_file:
+        messagebox.showerror("Error", "Please specify an output file.")
+        return
+    if process_csv(input_file, output_file):
+        messagebox.showinfo("Done", "Conversion completed successfully!")
+        os.startfile(os.path.dirname(output_file))
+
 def main(input_file='input.csv', output_file='manabox_to_archidekt_output.csv'):
     # Read the CSV file
     data = read_csv(input_file)
@@ -58,4 +115,25 @@ def main(input_file='input.csv', output_file='manabox_to_archidekt_output.csv'):
     write_csv(output_file, modified_data)
 
 if __name__ == "__main__":
-    main()
+    input_file = None
+
+    root = Tk()
+    root.title("Manabox to Archidekt Converter")
+
+    input_button = Button(root, text="Select Input File", command=select_input_file)
+    input_button.pack(pady=10)
+
+    input_label = Label(root, text="Input File: None")
+    input_label.pack(pady=5)
+
+    output_label = Label(root, text="Output File:")
+    output_label.pack(pady=5)
+
+    output_entry = Entry(root, width=50)
+    output_entry.insert(0, 'manabox_to_archidekt_output.csv')
+    output_entry.pack(pady=5)
+
+    convert_button = Button(root, text="Run Conversion", command=run_conversion)
+    convert_button.pack(pady=20)
+
+    root.mainloop()
