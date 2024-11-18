@@ -7,7 +7,7 @@ A collection of tools for converting Magic: The Gathering (MTG) card data betwee
 - [Converters](#converters)
   - [Manabox to Archidekt](#manabox-to-archidekt)
   - [Cardtrader to Manabox](#cardtrader-to-manabox)
-  - [Deckcheck Trim assistant](#deckcheck-trim)
+  - [Deckcheck Trim Assistant](#deckcheck-trim-assistant)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
@@ -24,11 +24,13 @@ Converts a Manabox collection export to an Archidekt import format. This tool sp
 2. Run the script using this command or launch in python from file explorer:
 
    ```sh
-   python manabox_to_archidekt.py sample_manabox_export.csv output.csv
+   python manabox_to_archidekt.py
    ```
-
-   - Optionally, specify an output file name.
-
+3. Select your file to convert
+4. Change output file if desired
+5. Click run conversion
+6. Upload output file to Archidekt
+   
 ### Cardtrader to Manabox
 
 This tool imports a Cardtrader order into a Manabox collection. It adjusts column names, set codes, and other format-specific details to match Manabox requirements.
@@ -41,9 +43,11 @@ This tool imports a Cardtrader order into a Manabox collection. It adjusts colum
    ```sh
    python cardtrader_to_manabox.py
    ```
-
-   - Optionally, specify an output file name.
-
+3. Select your file to convert
+4. Change output file if desired
+5. Click run conversion
+6. Import the output file to Manabox
+   
 ### Deckcheck Trim Assistant
 
 1. Ensure Python 3.x and the `pandas` library are installed.
@@ -66,7 +70,7 @@ This tool imports a Cardtrader order into a Manabox collection. It adjusts colum
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/MTG-CSV-Converters.git
+   git clone https://github.com/DrakeWood/MTG-CSV-Converters.git
    ```
 
 2. **Navigate to the project directory:**
