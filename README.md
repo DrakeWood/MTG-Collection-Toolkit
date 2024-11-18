@@ -111,7 +111,7 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
 ### **For Windows Users Without Git Installation**
 
 1. **Download the Repository from GitHub**
-   - Go to the GitHub repository: [https://github.com/DrakeWood/MTG-CSV-Converters](https://github.com/DrakeWood/MTG-CSV-Converters).
+   - Go to the GitHub repository: [https://github.com/DrakeWood/MTG-Collection-Toolkit](https://github.com/DrakeWood/MTG-Collection-Toolkit).
    - Click the green **"Code"** button, then click **"Download ZIP"**.
    - Save the ZIP file to a folder on your computer.
 
@@ -161,11 +161,11 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
 3. **Clone the Repository**  
    - Open your terminal and run:  
      ```sh
-     git clone https://github.com/DrakeWood/MTG-CSV-Converters.git
+     git clone https://github.com/DrakeWood/MTG-Collection-Toolkit.git
      ```  
    - Navigate into the project folder:  
      ```sh
-     cd MTG-CSV-Converters
+     cd MTG-Collection-Toolkit
      ```
 
 4. **Install Dependencies**  
@@ -174,12 +174,16 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
      pip install -r requirements.txt
      ```
 
-5. **Run the Script**  
+5. **Run the Script**
+   - Navigate to the tool's folder
+     ```sh
+     cd "folder name"
+     ```
    - Run the desired script with Python:  
      ```sh
      python3 script_name.py
      ```  
-     Replace `script_name.py` with the name of the script you want to execute.
+     Replace `folder name` `script_name.py` for the name of the script you want to execute.
 
 ## License
 
