@@ -21,7 +21,7 @@ def update_list(main_text_box, match_text_box, output_text_box):
             if "[" in line:
                 line = line[:line.index("[")] + "[Trimmed{noDeck}{noPrice}]"
             else:
-                line += " [trimmed]"
+                line += " [Trimmed{noDeck}{noPrice}]"
         updated_list.append(line)
     
     output_text = "\n".join(updated_list)
