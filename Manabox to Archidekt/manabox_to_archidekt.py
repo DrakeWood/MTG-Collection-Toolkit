@@ -55,7 +55,13 @@ def modify_data(data):
 def process_csv(input_file, output_file='manabox_to_archidekt_output.csv'):
     try:
         # Read the CSV file
-        df = pd.read_csv(input_file)
+        data = read_csv(input_file)
+        
+        # Modify the data
+        modified_data = modify_data(data)
+        
+        # Convert the modified data to a DataFrame
+        df = pd.DataFrame(modified_data[1:], columns=modified_data[0])
         
         # Rename columns
         df.rename(columns={
