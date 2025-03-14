@@ -9,6 +9,7 @@ A collection of tools for converting Magic: The Gathering (MTG) card data betwee
   - [Cardtrader to Manabox](#cardtrader-to-manabox)
   - [Deckcheck Trim Assistant](#deckcheck-trim-assistant)
   - [Manabox Value Balancer](#manabox-value-balancer)
+  - [Manabox Deck and List Remover](#manabox-deck-and-list-remover)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
@@ -27,11 +28,12 @@ Converts a Manabox collection export to an Archidekt import format. This tool sp
    ```sh
    python manabox_to_archidekt.py
    ```
+
 3. Select your file to convert
 4. Change output file if desired
 5. Click run conversion
 6. Upload output file to Archidekt
-   
+
 ### Cardtrader to Manabox
 
 This tool imports a Cardtrader order into a Manabox collection. It adjusts column names, set codes, and other format-specific details to match Manabox requirements.
@@ -44,11 +46,30 @@ This tool imports a Cardtrader order into a Manabox collection. It adjusts colum
    ```sh
    python cardtrader_to_manabox.py
    ```
+
 3. Select your file to convert
 4. Change output file if desired
 5. Click run conversion
 6. Import the output file to Manabox
-   
+
+### Manabox Deck and List Remover
+
+This tool imports a Manabox collection and exports the same collection with decks and lists removed. This is useful for showing cards available to trade.
+
+#### Usage
+
+1. Ensure Python 3.x and the `pandas` library are installed.
+2. Run the script using this command or launch in python from file explorer:
+
+   ```sh
+   python manabox_remove_decks.py
+   ```
+
+3. Select your file to convert
+4. Change output file if desired
+5. Click run conversion
+6. Import the output file to Manabox or send to a friend.
+
 ### Deckcheck Trim Assistant
 
 This tool helps remove cards from your deck the that Deckcheck Trim suggests to remove.
@@ -83,7 +104,7 @@ $0 for the worthless card
 
 This ensures the total cost ($10) is distributed fairly, reflecting each card's value rather than using a flat average. This approach provides more accurate tracking for trades, sales, or collection management.
 
-Here is an example of a freshly scanned Foundations Starter Collection bundle scanned in with default pricing set, and then with the tool. 
+Here is an example of a freshly scanned Foundations Starter Collection bundle scanned in with default pricing set, and then with the tool.
 ![image](https://github.com/user-attachments/assets/2d7c4778-c157-4e41-94c8-d322ad26dc08)
 
 #### Usage
@@ -99,7 +120,7 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
 4. Load the CSV into the value balancer.
 5. Enter the price that was paid for all of the cards in this binder total and click run conversion.
 6. Import the new CSV with updated values into Manabox.
-7. Delete the original binder. 
+7. Delete the original binder.
 
 ## Requirements
 
@@ -111,20 +132,23 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
 ### **For Windows Users Without Git Installation**
 
 1. **Download the Repository from GitHub**
+
    - Go to the GitHub repository: [https://github.com/DrakeWood/MTG-Collection-Toolkit](https://github.com/DrakeWood/MTG-Collection-Toolkit).
    - Click the green **"Code"** button, then click **"Download ZIP"**.
    - Save the ZIP file to a folder on your computer.
 
 2. **Extract the ZIP File**
+
    - Locate the downloaded ZIP file and right-click it.
    - Select **"Extract All"** and choose a location to extract the files.
 
 3. **Install Python**
-   - If you don’t already have Python installed, download it from the [Python website](https://www.python.org/downloads/).  
+
+   - If you don’t already have Python installed, download it from the [Python website](https://www.python.org/downloads/).
    - Run the installer and **check the box for "Add Python to PATH"** before proceeding with the installation.
 
 4. **Install Dependencies**
-   - Open a Command Prompt. Press `Win + R`, type `cmd`, and press Enter.  
+   - Open a Command Prompt. Press `Win + R`, type `cmd`, and press Enter.
    - Navigate to the extracted project folder. For example:
      ```sh
      cd C:\Users\YourUsername\Downloads\MTG-CSV-Converters-main
@@ -134,42 +158,46 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
      ```sh
      pip install -r requirements.txt
      ```
-     
+
 ### **For Linux Users**
 
-1. **Install Python**  
-   - Most Linux distributions come with Python pre-installed. To check, run:  
+1. **Install Python**
+
+   - Most Linux distributions come with Python pre-installed. To check, run:
      ```sh
      python3 --version
-     ```  
-     If not installed, you can install it using your package manager:  
+     ```
+     If not installed, you can install it using your package manager:
      ```sh
      sudo apt update
      sudo apt install python3 python3-pip
      ```
 
-2. **Install Git (if not installed)**  
-   - Check if Git is installed:  
+2. **Install Git (if not installed)**
+
+   - Check if Git is installed:
      ```sh
      git --version
-     ```  
-     If not, install it using your package manager:  
+     ```
+     If not, install it using your package manager:
      ```sh
      sudo apt install git
      ```
 
-3. **Clone the Repository**  
-   - Open your terminal and run:  
+3. **Clone the Repository**
+
+   - Open your terminal and run:
      ```sh
      git clone https://github.com/DrakeWood/MTG-Collection-Toolkit.git
-     ```  
-   - Navigate into the project folder:  
+     ```
+   - Navigate into the project folder:
      ```sh
      cd MTG-Collection-Toolkit
      ```
 
-4. **Install Dependencies**  
-   - Use pip to install the required libraries:  
+4. **Install Dependencies**
+
+   - Use pip to install the required libraries:
      ```sh
      pip install -r requirements.txt
      ```
@@ -179,10 +207,10 @@ Here is an example of a freshly scanned Foundations Starter Collection bundle sc
      ```sh
      cd "folder name"
      ```
-   - Run the desired script with Python:  
+   - Run the desired script with Python:
      ```sh
      python3 script_name.py
-     ```  
+     ```
      Replace `folder name` `script_name.py` for the name of the script you want to execute.
 
 ## License
