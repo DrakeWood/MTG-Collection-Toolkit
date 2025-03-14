@@ -51,6 +51,21 @@ def process_csv(input_file, output_file='cardtrader_to_manabox_output.csv'):
         # Miscellaneous set code corrections
         # Replace 'IDF' with 'DBL' for Innistrad: Double Feature
         df['set code'] = df['set code'].replace({'IDF': 'DBL'})
+        
+        # Replace 'FND' with 'FDN' for Foundations Collectors
+        df['set code'] = df['set code'].replace({'FND': 'FDN'})
+        
+        # Replace 'TCH' with 'LTC' for Tales of Middle-earth Holiday Release Commander
+        df['set code'] = df['set code'].replace({'TCH': 'LTC'})
+        
+        # Replace 'TRH' with 'LTC' for Tales of Middle-earth Holiday Release
+        df['set code'] = df['set code'].replace({'TRH': 'LTR'})
+        
+        # Replace 'DCM' with 'DMC' for Dominaria United Commander
+        df['set code'] = df['set code'].replace({'DCM': 'DMC'})
+        
+        # BAB buy a box cant be fixed.
+        # Phyrexian Dragon Engine // Mishra, Lost to Phyrexia
 
         # Save the updated DataFrame to a new CSV file
         df.to_csv(output_file, index=False)
