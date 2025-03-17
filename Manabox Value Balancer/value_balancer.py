@@ -56,6 +56,8 @@ class CSVProcessor:
                 name = row[name_idx]
                 proportion = (original_price * quantity) / total_sum
                 new_price = (proportion * self.total_purchase_price) / quantity
+                if new_price < 0.01:
+                    new_price = 0.01
                 row[purchase_price_idx] = f"{new_price:.2f}".rstrip('0').rstrip('.')
                 proportion_percentage = proportion * 100
                 logging.info(f"{name}, Original price: {original_price} * Quantity: {quantity} / Original Qty Sum: {total_sum} = Proportion: {proportion_percentage:.2f}% || {proportion_percentage:.2f}% * Actual total purchase price: {self.total_purchase_price} / Qty: {quantity} = New price: {row[purchase_price_idx]}")
